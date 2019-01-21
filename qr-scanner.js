@@ -38,7 +38,7 @@
                     if ($window.localMediaStream) {
                         context.drawImage(video, 0, 0, 307,250);
                         try {
-                            qrcode.decode();
+                            qrcode2.decode();
                         } catch(e) {
                             scope.ngError({error: e});
                         }
@@ -70,7 +70,7 @@
                     scope.ngVideoError({error: 'Native web camera streaming (getUserMedia) not supported in this browser.'});
                 }
 
-                qrcode.callback = function(data) {
+                qrcode2.callback = function(data) {
                     scope.ngSuccess({data: data});
                 };
 
